@@ -1,0 +1,12 @@
+<div class="mb-3">
+<%= form_with model: article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+</div>
+<div type="button" class="btn btn-primary" aria-label="Basic example">
+<%= link_to "Back to list", articles_path %>
+</div>

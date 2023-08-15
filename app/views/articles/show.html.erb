@@ -1,0 +1,18 @@
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<div type="button" class="btn btn-warning" aria-label="Basic example">
+<%= link_to "Edit this article", edit_article_path %>
+</div>
+
+<div type="button" class="btn btn-danger" aria-label="Basic example">
+<%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+</div>
+
+
+<div type="button" class="btn btn-primary" aria-label="Basic example">
+    <%=  link_to "Back to list", articles_path %>
+</div>
